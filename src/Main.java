@@ -1,16 +1,20 @@
 import java.time.LocalDate;
 
 public class Main {
-
     public static void main(String[] args) {
-
+        currentYear();
+        versionYear();
+        deliveryD();
+    }
+    public static void currentYear (){
         int year = LocalDate.now().getYear();
-
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " является високосным");
         } else {
             System.out.println(year + " не является високосным");
         }
+    }
+    public static void versionYear(){
         int clientOS1 = 0;
         int clientDeviceYear;
         clientDeviceYear = LocalDate.now().getYear();
@@ -29,6 +33,8 @@ public class Main {
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
         }
+    }
+    public static int deliveryD(){
         int deliveryDistanse = 95;
 
         int deliveryDays = 1;
@@ -41,6 +47,7 @@ public class Main {
         }
         System.out.println("Потребуется дней " + deliveryDays);
 
+        return deliveryDistanse;
     }
 }
 
