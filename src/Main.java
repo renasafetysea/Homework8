@@ -23,7 +23,7 @@ public class Main {
     printYearInfoResult(year,currentYear);
     }
     private static boolean yearInfo (int year) {
-        return year % 400 == 0;
+        return year % 4 == 0 && year % 100 != 0 || year % 400 ==0;
     }
     private static void printYearInfoResult (int year,boolean currentYear) {
         if (currentYear) {
